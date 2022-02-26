@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    max-width: 1280px;
+    margin: 30px auto;
+}
+
+.loja{
+    text-align: center;
+    font-size: 20pt;
+}
+
+.loja .title{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px; 
+    font-family: 'Supermercado One', cursive;
+}
+
+.loja .footer{
+    margin-top: 830px;
+    margin-bottom: -50px;
+    padding-bottom: 2px; 
+    font-size: 20pt;
+    font-weight: normal;
+    font-family: 'Supermercado One', cursive;
+}
+
+.loja .produtos {
+    max-width: 1000px;
+    width: 100%;
+    height: 100px;
+    margin: 25px auto;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.loja .produtos .produtos-single{
+    width: 30%;
+    margin-right: 3.3%;
+    margin-top: 20px;
+    box-shadow: 1px 1px 10px rgba(110, 110, 110, 0.815);
+    border: 1px solid rgb(153, 153, 153);
+    height: 430px;
+}
+
+.loja .produtos .produtos-single img{
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 5px;
+}
+
+.loja .produtos .produtos-single hr{
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.loja .produtos .produtos-single h4{
+    font-size: 18pt;
+    text-align: center;
+    color: rgba(70, 70, 70, 0.87);
+    font-family: 'Playfair Display', serif;
+    display: inline-block;
+}
+
+.loja .produtos .produtos-single span{
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.loja .produtos .produtos-single input[type=button]{
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+    padding: 5px 5px;
+    border: 0;
+    background-color: rgba(8, 179, 185, 0.884);
+    color: white;
+    font-size: 17pt;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.loja .produtos .produtos-single input[type=button]:hover{
+    background-color: rgb(4, 150, 155);
+}
+
+.loja .produtos .produtos-single h3 {
+    margin-top: 10px;
+    text-align: right;
+    width: 10%;
+    font-size: 20pt;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.loja .produtos .produtos-single p{
+    display: none;
+}
+
+.loja .produtos .produtos-single .micromodal{
+    max-width: 130px;
+    height: 80px;
+    text-align: center;
+    position: relative;
+    top: -130px;
+    right: -190px;
+    left: 140px;
+    padding: 10px;
+    display: none;
+}
+
+.loja .produtos .produtos-single .micromodal .criarMicroModal{
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(39, 39, 39, 0.493);
+    margin-left: -60px;
+    padding: 10px;
+}
+.loja .produtos .produtos-single .micromodal .criarMicroModal h4{
+    font-size: 15pt;
+    text-align: left;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.loja .produtos .produtos-single .micromodal .criarMicroModal h4:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.loja .carrinho .box{
+    position: fixed;
+    top: 90%;
+    left: 95%;    
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(70, 69, 69, 0.699);
+    cursor: pointer;
+}
+
+.loja .carrinho .box h3{
+    font-size: 20pt; 
+    text-align: center;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+ 
+.carrinho-box{
+    position: fixed;
+    margin-top: -1059px;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    background-color: rgba(114, 114, 114, 0.274);
+    display: none;
+}
+
+.carrinho-box .carrinho-main{
+    max-width: 768px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 1px 5px rgba(68, 68, 68, 0.623);
+    padding: 20px;
+    width: 100%;
+}
+
+.carrinho-box .carrinho-main h2{
+    text-align: center;
+}
+
+.carrinho-box .carrinho-main h2 i{
+    position: absolute;
+    top: -5%;
+    left: 100%;
+    cursor: pointer;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos{
+    max-width: 95%;
+    margin: 10px auto;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(73, 73, 73, 0.822);
+    padding-bottom: 5px;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .titulo,
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos{
+    width: 50%;
+    height: 20px;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .titulo h3{
+    text-align: left; 
+    font-weight: normal;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos {
+    text-align: right;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos input[type=button]{
+    margin-top: -2px;
+    width: 26%;
+    padding: 1px 8px;
+    border: 0;
+    background-color: rgba(8, 179, 185, 0.884);
+    color: white;
+    font-size: 14pt;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos input[type=button]:hover{
+    background-color: rgb(4, 150, 155);
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos h4{
+    font-size: 15pt;
+    cursor: pointer;
+    width: 5%;
+    position: relative;
+    left: 92%;
+    margin-top: -35px;
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos .icon-lixo{
+    color: red;
+    font-weight: bold; 
+}
+
+.carrinho-box .carrinho-main .carrinho-produtos-main .carrinho-produtos .infos .icon-lixo:hover{
+    color: rgb(165, 4, 4);
+    font-weight: bold;
+}
+
+.criarModalComprar{
+    max-width: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: -1059px;
+    background-color: rgba(114, 114, 114, 0.274);
+    display: none;
+}
+
+.criarModalComprar .modalComprar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    max-width: 768px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.criarModalComprar .modalComprar .produto-infos,
+.criarModalComprar .modalComprar .pessoa-infos{
+    width: 50%;
+    padding: 25px;
+}
+
+.criarModalComprar .modalComprar .produto-infos{
+    border-right: 1px solid rgb(175, 175, 175);
+}
+
+.criarModalComprar .modalComprar .produto-infos img{
+    text-align: center;
+    width: 100%;
+    height: 350px;
+    max-width: 100%;
+}
+
+.criarModalComprar .modalComprar .produto-infos h3{
+    text-align: left;
+    font-size: 20pt;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.criarModalComprar .modalComprar .produto-infos span{
+    margin-top: 10px;
+    font-size: 22pt;
+}
+
+.criarModalComprar .modalComprar .produto-infos p{
+    margin-top: 15px;
+    font-size: 12pt;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa{
+    width: 100%;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa input{
+    max-width: 200px;
+    display: block;
+    width:100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa .pessoa-pagamento{
+    margin-top: 50px;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa .pessoa-pagamento .metodos-pay{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa .pessoa-pagamento .metodos-pay div{
+    border: 1px solid rgb(146, 146, 146);
+    padding: 10px;
+    margin-right: 5px;
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa .pessoa-pagamento .metodos-pay .selected{
+    border: 2px solid rgba(58, 58, 58, 0.774);
+    color: rgba(58, 58, 58, 0.774);
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa .pessoa-pagamento .infos-pay input[type=text].securityCode{
+    width: 34.5%;
+    display: inline-block;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa .pessoa-pagamento .infos-pay select{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa input[type=submit]{
+    background-color: rgba(8, 179, 185, 0.884);
+    border: 0;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.criarModalComprar .modalComprar .pessoa-infos .info-pessoa input[type=submit]:hover{
+    background-color: rgb(4, 150, 155);
+}
+
+.criarModalComprar .modalComprar .close-modal-comprar{
+    position: absolute;
+    top: -2%;
+    left: 100%;
+    cursor: pointer;
+}
+
+.criarModalInfos {
+    max-width: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: -1059px;
+    background-color: rgba(114, 114, 114, 0.274);
+    display: none;
+} 
+
+.criarModalInfos .modalInfos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    max-width: 768px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.criarModalInfos .modalInfos .img,
+.criarModalInfos .modalInfos .infos{
+    width: 50%;
+    padding: 15px;
+}
+
+.criarModalInfos .modalInfos .img .images{
+    width: 100%;
+    padding: 10px;
+    border-right: 1px solid rgba(128, 127, 127, 0.904);
+}
+
+.criarModalInfos .modalInfos .img .images img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.criarModalInfos .modalInfos .infos .informacoes h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 19pt;
+}
+
+.criarModalInfos .modalInfos .infos .informacoes p{
+    width: 80%;
+    padding: 10px;
+    background-color: rgba(146, 146, 146, 0.452);
+}
+
+.criarModalInfos .modalInfos .infos .informacoes input[type=button]{
+    margin-top: 10px;
+    width: 80%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border: 0;
+    background-color: rgba(8, 179, 185, 0.884);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.criarModalInfos .modalInfos .infos .informacoes input[type=button]:hover{
+    background-color: rgb(4, 150, 155);
+}
+
+.criarModalInfos .modalInfos .close-modal-infos{
+    position: absolute;
+    top: -2.5%;
+    left: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    
+    .loja .produtos .produtos-single {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .loja .produtos .produtos-single .micromodal{
+        position: relative;
+        left: 180px;
+        top: -155px;
+    }
+
+    .loja .footer{
+        margin-top: 2620px;
+    }
+    
+    .loja .carrinho .box{
+        position: fixed;
+        top: 90%;
+        left: 89%;    
+    }
+
+    .carrinho-box{
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .carrinho-box .carrinho-main{
+        max-width: 500px;
+    }
+
+}
